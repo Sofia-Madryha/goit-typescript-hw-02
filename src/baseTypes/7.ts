@@ -4,15 +4,14 @@
 */
 
 enum Day {
- suturday = "Suturday", 
-  sunday =  "Sunday",
+ SATURDAY = "Saturday", 
+  SUNDAY =  "Sunday",
 } 
-function isWeekend(Day): boolean {
-  if (Day.suturday || Day.sunday) {
-    return true
-  } else {
-    return false
-  }
+
+
+function isWeekend(dayOfWeek: Day): boolean {
+ return dayOfWeek === Day.SATURDAY || dayOfWeek === Day.SUNDAY
+  
 }
 
-console.log(isWeekend("Suturday"));
+console.log(isWeekend(Day.SATURDAY));
